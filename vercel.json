@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/fapi/:path*",
+      "destination": "https://fapi.binance.com/fapi/:path*"
+    },
+    {
+      "source": "/api/futures/:path*",
+      "destination": "https://fapi.binance.com/futures/:path*"
+    }
+  ]
+}
