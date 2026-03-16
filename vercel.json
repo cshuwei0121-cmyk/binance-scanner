@@ -1,0 +1,22 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/fapi/:path*",
+      "destination": "https://fapi.binance.com/fapi/:path*"
+    },
+    {
+      "source": "/api/futures/:path*",
+      "destination": "https://fapi.binance.com/futures/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "X-MBX-APIKEY,Content-Type" }
+      ]
+    }
+  ]
+}
